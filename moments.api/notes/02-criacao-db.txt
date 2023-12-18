@@ -1,0 +1,36 @@
+intalamos o lucid
+ npm i @adonisjs/lucid
+
+----------------------------
+
+
+ node ace configure @adonisjs/lucid
+
+
+-------------------------
+
+
+depois no arquivo cors.ts alterar
+
+
+const corsConfig: CorsConfig = {
+
+  enabled: (request) => request.url().startsWith('/api'),
+
+  ------------------------------------
+
+  alterar routes.ts 
+
+
+
+Route.group(() => {
+  Route.get('/', async () => {
+    return { hello: 'world' }
+  })
+}).prefix('/api')
+
+
+----------------------------
+
+adiciona api ao fim do adress
+http://localhost:3333/api

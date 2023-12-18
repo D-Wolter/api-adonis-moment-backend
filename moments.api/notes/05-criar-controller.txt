@@ -1,0 +1,41 @@
+node ace make:controller NOMEDATABELASINGUILAR
+node ace make:controller Moment
+
+
+---------------
+
+adicionando no routes
+
+Route.group(() => {
+  Route.get('/', async () => {
+    return { hello: 'world' }
+  })
+
+  Route.post('/moments', 'MomentsController.store')
+}).prefix('/api')
+
+
+-----------------
+
+node ace list:routes
+mostra tres rotas
+getget
+post
+
+------------------
+
+  Route.resource('/moments', 'MomentsController').apiOnly()
+
+  se alterar de post p resource ele cria todos os metodos posivel pra rotas
+
+  node ace list:routes
+mostra tres rotas
+getget
+post
+put
+delete
+...
+...
+...
+
+---------------------

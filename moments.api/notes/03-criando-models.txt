@@ -1,0 +1,16 @@
+node ace make:model Moment
+
+
+-----------------
+
+
+em model/moments adicionamos as colunas depois do ids ja gerados
+
+  @column()
+  public title: string
+
+  @column()
+  public description: string
+
+  @column()
+  public image: string
