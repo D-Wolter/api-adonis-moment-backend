@@ -13,8 +13,3 @@ npm install,
 npm run dev,
 
 
-Para rodar aplicação front-end,
-
-npm install,
-ng serve,
-
